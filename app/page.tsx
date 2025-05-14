@@ -233,15 +233,15 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
               <ul className="text-xl md:text-2xl mb-6 text-white/90 max-w-xl space-y-2 text-left mx-auto">
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">✓</span>
-                  <span>Transforma tu idea de aplicación en un plan de desarrollo completo.</span>
+                  <span>{t("feature1")}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">✓</span>
-                  <span>IA experta que actúa como ingeniero de software y gestor de producto.</span>
+                  <span>{t("feature2")}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">✓</span>
-                  <span>Genera documentación detallada y profesional para tu proyecto.</span>
+                  <span>{t("feature3")}</span>
                 </li>
               </ul>
               <div className="flex justify-center">
@@ -438,6 +438,29 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
         <div className="max-w-4xl mx-auto mt-12 mb-8">
           <HowItWorks />
         </div>
+
+        {/* Sección: ¿Qué es un PRD y por qué es importante? */}
+        <section className="max-w-3xl mx-auto mb-12 bg-white/5 rounded-xl p-8 shadow-lg border border-white/10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-white">{t("prdTitle")}</h2>
+          <p className="text-white/90 text-lg mb-4 text-center">
+            {t("prdDescription")}
+          </p>
+          <ul className="text-white/80 space-y-2 mb-4">
+            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature1")}</li>
+            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature2")}</li>
+            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature3")}</li>
+            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature4")}</li>
+          </ul>
+          <p className="text-white/80 text-md text-center">
+            {t("prdVibeCoding")}
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center mt-6">
+            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
+            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>
+            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag3")}</div>
+            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag4")}</div>
+          </div>
+        </section>
       </div>
 
       <DownloadBanner show={showDownloadBanner} onClose={() => setShowDownloadBanner(false)} />

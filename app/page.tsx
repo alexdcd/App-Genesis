@@ -230,7 +230,20 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400/30 to-pink-500/30 blur-lg opacity-80 group-hover:opacity-95 transition-opacity duration-300" aria-hidden="true"></div>
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl mb-6 text-white/90 max-w-xl">{t("subtitle")}</p>
+              <ul className="text-xl md:text-2xl mb-6 text-white/90 max-w-xl space-y-2 text-left mx-auto">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>Transforma tu idea de aplicación en un plan de desarrollo completo.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>IA experta que actúa como ingeniero de software y gestor de producto.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>Genera documentación detallada y profesional para tu proyecto.</span>
+                </li>
+              </ul>
               <div className="flex justify-center">
                 <a href="https://aimafia.substack.com/" target="_blank" rel="noopener noreferrer" className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-white/10 transition-colors flex items-center gap-2 mt-2">
                   <span>Creado por La Mafia IA</span>

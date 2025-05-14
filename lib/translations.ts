@@ -2,7 +2,7 @@ export type Language = "en" | "fr" | "pt" | "es"
 
 export const translations = {
   en: {
-    title: "VibePRD",
+    title: "Vibe PRD",
     subtitle:
       "Transform your app idea into a comprehensive product requirements document. Our AI acts as both a software engineer and product manager to create detailed documentation for your project.",
     inputTab: "Input",
@@ -102,7 +102,7 @@ export const translations = {
     step3Description: "Recevez un document détaillé des exigences du produit",
   },
   pt: {
-    title: "VibePRD",
+    title: "Vibe PRD",
     subtitle:
       "Transforme sua ideia de aplicativo em um documento abrangente de requisitos do produto. Nossa IA atua como engenheiro de software e gerente de produto para criar documentação detalhada para o seu projeto.",
     inputTab: "Entrada",
@@ -152,7 +152,7 @@ export const translations = {
     step3Description: "Receba um documento detalhado de requisitos do produto",
   },
   es: {
-    title: "VibePRD",
+    title: "Vibe PRD",
     subtitle:
       "Transforma tu idea de aplicación en un plan de desarrollo completo. Nuestra IA actúa como ingeniero de software y gestor de producto para crear documentación detallada para tu proyecto.",
     inputTab: "Entrada",
@@ -165,7 +165,7 @@ export const translations = {
     generic: "Genérico",
     cursor: "Cursor",
     windsurf: "Windsurf",
-    productType: "Tipo de Producto",
+    productType: "Stack Recomendado",
     mobileApp: "Aplicación Móvil",
     webApp: "Aplicación Web",
     desktopSoftware: "Software de Escritorio",

@@ -141,12 +141,22 @@ function HomeContent() {
         await new Promise((resolve) => setTimeout(resolve, timePerStep))
       }
 
+      const stackRecommendation = getStackRecommendation()
+      const updatedPrompt = `
+${prompt}
+
+Stack recomendado por el usuario:
+${stackRecommendation}
+
+Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado en la generación del PRD y en las recomendaciones técnicas.
+`
+
       const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt, platform, productType }),
+        body: JSON.stringify({ prompt: updatedPrompt, platform, productType }),
       })
 
       if (!response.ok) {
@@ -214,7 +224,7 @@ function HomeContent() {
             <div className="text-center md:text-left max-w-2xl">
               <div className="flex items-center justify-center md:justify-start mb-4">
                 <span className="text-5xl mr-3">🧠</span>
-                <h1 className="text-4xl md:text-5xl font-bold">VibePRD</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">Vibe PRD</h1>
               </div>
               <p className="text-xl md:text-2xl mb-6 text-purple-100 max-w-xl">{t("subtitle")}</p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -303,7 +313,6 @@ function HomeContent() {
                   </Select>
 
                   <div className="mt-4 p-3 bg-slate-100 dark:bg-slate-800 rounded-md">
-                    <h4 className="text-sm font-medium mb-1">{t("recommendedStack")}:</h4>
                     <p className="text-sm text-slate-600 dark:text-slate-400">{getStackRecommendation()}</p>
                   </div>
                 </div>

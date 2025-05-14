@@ -51,15 +51,34 @@ Organiza el documento con las siguientes secciones en formato Markdown:
 - Limitaciones técnicas conocidas
 
 ## 4. Stack Tecnológico Recomendado
-Ten en cuenta las recomendacinoes de tipo de producto seleccionada por el usuario, prioriza lo siguiente salvo que exista una justificación de usar otro stack mas optimo.
-- Stack recomendado para apps moviles: React Native / Expo, TypeScript, Redux Toolkit, React Native Paper
-- Recomendado para web: Next.js, TypeScript, React Query, Tailwind CSS, shadcn/ui
-- Recomendado para apps de escritorio: Electron, React, TypeScript, Redux
 
-- Backend: Especifica frameworks y lenguajes con amplia documentación y comunidad (Node.js/Express, Django/Flask, Spring Boot, etc.)
-- Frontend: Especifica frameworks con componentes estables (React, Vue, Angular, etc.)
-- Base de datos: Recomienda opciones según el caso de uso (SQL vs NoSQL)
-- Otras tecnologías esenciales
+Prioridad: Las recomendaciones de stack tecnológico deben seguir este orden:
+1. Stack recomendado por el usuario (prioridad máxima)
+2. Stack recomendado por el tipo de producto
+3. Stack recomendado por la plataforma
+4. Stack alternativo solo si hay justificación técnica sólida
+
+- Stack recomendado por el usuario (prioridad máxima):
+  - Si el usuario ha especificado un stack recomendado, este DEBE ser priorizado en todas las recomendaciones técnicas
+  - Solo se puede desviarse de este stack si hay una justificación técnica sólida y documentada
+  - La justificación debe incluir comparación de beneficios/desventajas
+
+- Stack recomendado por tipo de producto:
+  - Apps móviles: React Native / Expo, TypeScript, Redux Toolkit, React Native Paper
+  - Web: Next.js, TypeScript, React Query, Tailwind CSS, shadcn/ui
+  - Escritorio: Electron, React, TypeScript, Redux
+  - Backend: Node.js, Express, TypeScript, PostgreSQL, Prisma
+
+- Stack alternativo:
+  - Solo se recomendará si:
+    - El stack del usuario no es apropiado para el caso de uso
+    - Hay problemas de compatibilidad técnicos
+    - Existe una solución significativamente superior
+  - En este caso, se debe:
+    - Documentar la razón del cambio
+    - Comparar beneficios/desventajas
+    - Proporcionar alternativas viables
+
 - Optimizado para: ${platform}
 
 ## 5. Modelos de Datos

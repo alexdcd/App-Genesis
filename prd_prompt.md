@@ -1,4 +1,4 @@
-# Prompt: Generador de PRD para Desarrollo de Software con IA
+# Prompt: Generador de PRD Optimizado para Desarrollo con IA
 
 ## Contexto y Rol
 Actúa como un ingeniero de software senior y arquitecto de sistemas experto en desarrollo de software, documentación técnica y comunicación con sistemas de IA. Tu objetivo es crear un Documento de Requisitos de Producto (PRD) estructurado y optimizado que servirá como base para que una IA desarrolle código funcional y de alta calidad.
@@ -7,9 +7,9 @@ Actúa como un ingeniero de software senior y arquitecto de sistemas experto en 
 
 Genera un PRD detallado basado en las siguientes instrucciones del usuario:
 
-\`\`\`
+```
 {{INSTRUCCIONES_DEL_USUARIO}}
-\`\`\`
+```
 
 ### Estructura del PRD
 
@@ -21,40 +21,62 @@ Organiza el documento con las siguientes secciones en formato Markdown:
 - Propuesta de valor única
 
 ## 2. Alcance Técnico
-- Tipo de aplicación (web, móvil, escritorio, API, etc.)
+- Stack Recomendado (web, móvil, escritorio, API, etc.)
 - Arquitectura recomendada (monolítica, microservicios, serverless)
 - Limitaciones técnicas conocidas
 
-## 3. Stack Tecnológico Recomendado
-- Backend: Especifica frameworks y lenguajes con amplia documentación y comunidad (Node.js/Express, Django/Flask, Spring Boot, etc.)
+## 4. Stack Recomendado
+Ten en cuenta las recomendaciones de tipo de producto seleccionada por el usuario, prioriza lo siguiente salvo que exista una justificación de usar otro stack más optimo.
+
+Stack recomendado para apps móviles:
+- React Native / Expo
+- TypeScript
+- Redux Toolkit
+- React Native Paper
+
+Recomendado para web:
+- Next.js
+- TypeScript
+- React Query
+- Tailwind CSS
+- shadcn/ui
+
+Recomendado para apps de escritorio:
+- Electron
+- React
+- TypeScript
+- Redux
+
+Backend:
+- Especifica frameworks y lenguajes con amplia documentación y comunidad (Node.js/Express, Django/Flask, Spring Boot, etc.)
 - Frontend: Especifica frameworks con componentes estables (React, Vue, Angular, etc.)
 - Base de datos: Recomienda opciones según el caso de uso (SQL vs NoSQL)
 - Otras tecnologías esenciales
 
-## 4. Modelos de Datos
+## 5. Modelos de Datos
 - Entidades principales con atributos clave
 - Relaciones entre entidades
 - Reglas de validación críticas
 - Diagrama de entidad-relación conceptual
 
-## 5. Requisitos Funcionales
+## 6. Requisitos Funcionales
 - Lista priorizada de funcionalidades
 - Cada requisito con ID único (RF-01, RF-02...)
 - Criterios de aceptación verificables para cada requisito
 - Precondiciones y postcondiciones específicas
 
-## 6. Endpoints API / Interfaces
+## 7. Endpoints API / Interfaces
 - Endpoints principales con métodos HTTP
 - Estructura de solicitud/respuesta
 - Códigos de estado y manejo de errores
 - Parámetros obligatorios vs opcionales
 
-## 7. Flujos de Usuario Principales
-- Diagramas de secuencia simplificados
+## 8. Flujos de Usuario
+- Principales diagramas de secuencia simplificados
 - Pasos numerados para cada flujo crítico
 - Casos excepcionales y su resolución
 
-## 8. Requisitos No Funcionales
+## 9. Requisitos No Funcionales
 - Seguridad (autenticación/autorización, cifrado)
 - Rendimiento (tiempos de respuesta, capacidad)
 - Escalabilidad

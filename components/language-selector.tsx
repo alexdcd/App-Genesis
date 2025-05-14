@@ -15,14 +15,14 @@ export default function LanguageSelector() {
 
   return (
     <div className="flex items-center">
-      <span className="mr-2 text-sm text-slate-600 dark:text-slate-400">{t("languageSelector")}:</span>
+      <span className="mr-2 text-sm text-slate-900 dark:text-slate-100">{t("languageSelector")}:</span>
       <Select value={language} onValueChange={(value) => setLanguage(value as any)}>
-        <SelectTrigger className="w-[120px]">
+        <SelectTrigger className="w-[120px] dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100">
           <SelectValue placeholder="Language" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700">
           {languages.map((lang) => (
-            <SelectItem key={lang.code} value={lang.code}>
+            <SelectItem key={lang.code} value={lang.code} className="dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600">
               {lang.name}
             </SelectItem>
           ))}

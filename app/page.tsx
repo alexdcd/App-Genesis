@@ -214,28 +214,40 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-900">
       {/* Simple Hero Section */}
-      <div className="bg-purple-600 text-white py-12 px-4">
+      <div className="relative bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="flex justify-end mb-4">
             <LanguageSelector />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left max-w-2xl">
-              <div className="flex items-center justify-center md:justify-start mb-4">
+          <div className="flex flex-col items-center justify-center gap-8">
+            <div className="text-center max-w-2xl relative">
+              <div className="flex items-center justify-center mb-4">
                 <span className="text-5xl mr-3">🧠</span>
-                <h1 className="text-4xl md:text-5xl font-bold">Vibe PRD</h1>
+                <h1 className="text-4xl md:text-5xl font-bold relative group uppercase tracking-wider">
+                  <span className="relative z-10 text-white">VIBE</span>
+                  <span className="relative z-10 text-white">&nbsp;PRD</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/30 to-pink-500/30 blur-lg opacity-80 group-hover:opacity-95 transition-opacity duration-300" aria-hidden="true"></div>
+                </h1>
               </div>
-              <p className="text-xl md:text-2xl mb-6 text-purple-100 max-w-xl">{t("subtitle")}</p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <div className="bg-white/10 px-4 py-2 rounded-full text-sm font-medium">AI-Powered</div>
-                <div className="bg-white/10 px-4 py-2 rounded-full text-sm font-medium">Multi-Language</div>
-                <div className="bg-white/10 px-4 py-2 rounded-full text-sm font-medium">Developer-Friendly</div>
+              <p className="text-xl md:text-2xl mb-6 text-white/90 max-w-xl">{t("subtitle")}</p>
+              <div className="flex justify-center">
+                <a href="https://aimafia.substack.com/" target="_blank" rel="noopener noreferrer" className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-white/10 transition-colors flex items-center gap-2 mt-2">
+                  <span>Creado por La Mafia IA</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 opacity-70">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom badges */}
+
 
       <div className="container mx-auto py-8 px-4">
         {error && (

@@ -447,18 +447,36 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
         {/* Sección: ¿Qué es un PRD y por qué es importante? */}
         <section className="max-w-3xl mx-auto mb-12 bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-white/10">
   <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">{t("prdTitle")}</h2>
-  <p className="text-slate-700 dark:text-white/90 text-lg mb-4 text-center">
-    {t("prdDescription")}
-  </p>
-  <ul className="text-slate-600 dark:text-white/80 space-y-2 mb-4">
-    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature1")}</li>
-    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature2")}</li>
-    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature3")}</li>
-    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature4")}</li>
-  </ul>
-  <p className="text-slate-600 dark:text-white/80 text-md text-center">
-    {t("prdVibeCoding")}
-  </p>
+  <div className="text-slate-700 dark:text-white/90 text-base md:text-[15px] mb-4 text-left md:text-center leading-relaxed">
+    <p className="mb-2">
+      <strong>Un PRD (Product Requirements Document)</strong> es el documento fundamental que describe de manera clara y estructurada <strong>qué debe hacer tu producto</strong>, <strong>cómo debe funcionar</strong> y <strong>cuáles son sus objetivos</strong>. Es la base para que todo el equipo (diseño, desarrollo, negocio) trabaje alineado.
+    </p>
+    <p className="mb-2">
+      <strong>Pero un PRD de VIBE PRD, diseñado para IAs, va un paso más allá:</strong>
+    </p>
+    <ul className="list-none space-y-2 mb-4 text-left">
+      <li className="flex items-start gap-2">
+        <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
+        <span><strong>Define con precisión quirúrgica</strong> el alcance, objetivos y funcionalidades que la IA debe implementar.</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
+        <span><strong>Evita ambigüedades</strong> que confunden a la IA, reduciendo errores y ciclos de re-generación de código.</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
+        <span><strong>Permite que la IA estime dependencias</strong> y genere arquitecturas de software coherentes.</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
+        <span>Es el <strong>input crucial</strong> para que las IAs de desarrollo generen código preciso y funcional, minimizando errores de interpretación.</span>
+      </li>
+    </ul>
+    <p className="mb-2">
+      Para el <strong>Vibe Coding</strong> (programar con IA de forma ágil y efectiva), un PRD de VIBE PRD es tu mejor aliado. Asegura que la IA reciba <strong>instrucciones inequívocas</strong> para generar código de alta calidad, bien estructurado y perfectamente alineado con tu visión. <span className="font-bold">¡No le pidas a una IA que programe sin el PRD de VIBE PRD!</span>
+    </p>
+  </div>
+
   <div className="flex flex-wrap gap-3 justify-center mt-6">
     <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
     <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>

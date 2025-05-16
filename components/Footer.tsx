@@ -16,9 +16,9 @@ export default function Footer() {
   />
 </div>
 <span className="text-sm text-slate-700 dark:text-slate-200">
-  Ey curioso <span role="img" aria-label="Saludo">👋</span> Soy <a href="https://alexdc.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer">Alex DC</a>.
-  He creado esta herramienta con <a href="https://programacionia.substack.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer" tabIndex={0}>Vibe Coding</a>.
-  Si quieres saber cómo hacer cosas parecidas únete gratis a <a href="https://aimafia.substack.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer">La Mafia IA</a>.
+Soy <a href="https://alexdc.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer">Alex DC</a>  <span role="img" aria-label="Saludo">👋 </span>  
+   He creado esta herramienta con <a href="https://programacionia.substack.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer" tabIndex={0}>Vibe Coding</a>.
+  Si quieres saber cómo puedes utilizar la IA para crear herramientas como esta únete gratis a <a href="https://aimafia.substack.com/" className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-400" target="_blank" rel="noopener noreferrer">La Mafia IA</a>.
 </span>
       </div>
     </footer>

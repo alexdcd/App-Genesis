@@ -446,39 +446,38 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
 
         {/* Sección: ¿Qué es un PRD y por qué es importante? */}
         <section className="max-w-3xl mx-auto mb-12 bg-white dark:bg-white/5 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-slate-200 dark:border-white/10">
-  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">{t("prdTitle")}</h2>
+  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">{t("prdSectionTitle")}</h2>
   <div className="text-slate-700 dark:text-white/90 text-base md:text-[15px] mb-4 text-left md:text-center leading-relaxed">
     <p className="mb-2">
-      <strong>Un PRD (Product Requirements Document)</strong> es el documento fundamental que describe de manera clara y estructurada <strong>qué debe hacer tu producto</strong>, <strong>cómo debe funcionar</strong> y <strong>cuáles son sus objetivos</strong>. Es la base para que todo el equipo (diseño, desarrollo, negocio) trabaje alineado.
+      <strong>{t("prdIntroStart")}</strong> {t("prdIntroMiddle")} <strong>{t("prdIntroStrong")}</strong> {t("prdIntroEnd")}
     </p>
     <p className="mb-4 mt-6 text-center">
-      <span className="text-2xl mr-2">🔥</span><strong className="uppercase">Pero un PRD de VIBE PRD, diseñado para IAs, va un paso más allá:</strong>
+      <span className="text-2xl mr-2">🔥</span><strong className="uppercase">{t("prdSubtitle")}</strong>
     </p>
     <ul className="list-none space-y-2 mb-4 text-left">
       <li className="flex items-start gap-2">
         <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
-        <span><strong>Define con precisión quirúrgica</strong> el alcance, objetivos y funcionalidades que la IA debe implementar.</span>
+        <span><strong>{t("prdBullet1Strong")}</strong> {t("prdBullet1Rest")}</span>
       </li>
       <li className="flex items-start gap-2">
         <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
-        <span><strong>Evita ambigüedades</strong> que confunden a la IA, reduciendo errores y ciclos de re-generación de código.</span>
+        <span><strong>{t("prdBullet2Strong")}</strong> {t("prdBullet2Rest")}</span>
       </li>
       <li className="flex items-start gap-2">
         <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
-        <span><strong>Permite que la IA estime dependencias</strong> y genere arquitecturas de software coherentes.</span>
+        <span><strong>{t("prdBullet3Strong")}</strong> {t("prdBullet3Rest")}</span>
       </li>
       <li className="flex items-start gap-2">
         <span className="text-green-500 dark:text-green-400 mt-1">✓</span>
-        <span>Es el <strong>input crucial</strong> para que las IAs de desarrollo generen código preciso y funcional, minimizando errores de interpretación.</span>
+        <span>{t("prdBullet4")}</span>
       </li>
     </ul>
     <p className="mb-2">
-      Para el <strong>Vibe Coding</strong> (programar con IA de forma ágil y efectiva), un PRD de VIBE PRD es tu mejor aliado. Asegura que la IA reciba <strong>instrucciones inequívocas</strong> para generar código de alta calidad, bien estructurado y perfectamente alineado con tu visión.
+      {t("prdVibeCodingStart")} <strong>{t("prdVibeCodingStrong")}</strong> {t("prdVibeCodingEnd")}
     </p>
-    
     <p className="mt-6 text-center">
       <span className="font-bold text-lg bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-        ¡NO LE PIDAS A UNA IA QUE PROGRAME SIN EL PRD DE VIBE PRD!
+        {t("prdWarning")}
       </span>
     </p>
   </div>

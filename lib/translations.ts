@@ -256,7 +256,7 @@ export const translations = {
     step2Title: "Análisis de IA",
     step2Description: "Nuestra IA analiza tu idea y crea un PRD completo",
     step3Title: "Obtén Tu PRD",
-    step3Description: "Recibe un documento detallado de requisitos de producto",
+    step3Description: "Recibe un documento detallado de requisitos de producto, para que tu programa de Vibe Coding cree tu herramienta",
   },
 }
 

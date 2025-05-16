@@ -289,7 +289,7 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <h3 className="text-md font-medium mb-2">{t("targetPlatform")}</h3>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-3 gap-2 mb-2">
                     <Button
                       variant={platform === "generic" ? "default" : "outline"}
                       onClick={() => setPlatform("generic")}
@@ -309,6 +309,11 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
                       {t("windsurf")}
                     </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground">
+                    {platform === "generic" && "El PRD generado será un documento estándar que podrás usar como referencia para cualquier herramienta o plataforma."}
+                    {platform === "cursor" && "El PRD se optimizará para Cursor, incluyendo comandos específicos y estructura de archivos recomendada para el editor."}
+                    {platform === "windsurf" && "El PRD se adaptará a Windsurf, con consideraciones especiales para desarrollo colaborativo y características específicas de la plataforma."}
+                  </p>
                 </div>
 
                 <div>

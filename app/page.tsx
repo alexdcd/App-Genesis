@@ -270,10 +270,10 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
         )}
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-4xl mx-auto">
-          <TabsList className="grid grid-cols-3 mb-6">
-            <TabsTrigger value="input">{t("inputTab")}</TabsTrigger>
-            <TabsTrigger value="thinking">{t("thinkingTab")}</TabsTrigger>
-            <TabsTrigger value="blueprint">{t("blueprintTab")}</TabsTrigger>
+          <TabsList className="flex mb-6 w-full max-w-full overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700 text-xs md:text-sm gap-2 px-1">
+            <TabsTrigger value="input" className="flex-shrink-0 px-3 py-2 rounded-lg data-[state=active]:bg-slate-100 dark:data-[state=active]:bg-slate-800 data-[state=active]:font-bold">{t("inputTab")}</TabsTrigger>
+            <TabsTrigger value="thinking" className="flex-shrink-0 px-3 py-2 rounded-lg data-[state=active]:bg-slate-100 dark:data-[state=active]:bg-slate-800 data-[state=active]:font-bold">{t("thinkingTab")}</TabsTrigger>
+            <TabsTrigger value="blueprint" className="flex-shrink-0 px-3 py-2 rounded-lg data-[state=active]:bg-slate-100 dark:data-[state=active]:bg-slate-800 data-[state=active]:font-bold">{t("blueprintTab")}</TabsTrigger>
           </TabsList>
 
           <TabsContent value="input">
@@ -445,7 +445,7 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
         </div>
 
         {/* Sección: ¿Qué es un PRD y por qué es importante? */}
-        <section className="max-w-3xl mx-auto mb-12 bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-white/10">
+        <section className="max-w-3xl mx-auto mb-12 bg-white dark:bg-white/5 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-slate-200 dark:border-white/10">
   <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">{t("prdTitle")}</h2>
   <div className="text-slate-700 dark:text-white/90 text-base md:text-[15px] mb-4 text-left md:text-center leading-relaxed">
     <p className="mb-2">
@@ -483,11 +483,11 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
     </p>
   </div>
 
-  <div className="flex flex-wrap gap-3 justify-center mt-6">
-    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
-    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>
-    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag3")}</div>
-    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag4")}</div>
+  <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mt-6">
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">{t("prdTag3")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">{t("prdTag4")}</div>
   </div>
 </section>
       </div>

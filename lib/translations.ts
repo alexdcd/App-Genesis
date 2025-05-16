@@ -240,9 +240,9 @@ export const translations = {
     newsletterTitle: "¡Hola 👋 Soy Alex DC!",
     newsletterSubtitle:
       "Creador de esta app y de la Newsletter de IA para Emprendedores y Creadores con más de +15.000 lectores semanales.",
-    newsletterButton: "La Mafia IA 🤖🛠️",
-    newsletterStats: "Más de 15.000 lectores semanales",
-    newsletterPosition: "La newsletter de Substack más leída en España sobre IA para Emprendedores y Creadores",
+    newsletterButton: "La Mafia IA 🤖🛠️ ↗",
+    newsletterStats: "SUSCRÍBETE GRATIS AHORA 👇",
+    newsletterPosition: "🏅 4ª newsletter de Substack más leída en España+15.000 lectores semanales - Inteligencia Artificial para Emprendedores y Creadores. SUSCRÍBETE GRATIS AHORA 👇",
     aiRecommend: "Recomendar IA",
     countdownPrefix: "Listo en",
     countdownSuffix: "segundos",

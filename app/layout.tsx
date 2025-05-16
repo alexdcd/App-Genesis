@@ -8,11 +8,19 @@ import Footer from "@/components/Footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "VibePRD - AI-Powered Product Requirements Document Generator",
+  title: "🧠 VibePRD - AI-Powered Product Requirements Document Generator",
   description: "Transform your app idea into a comprehensive product requirements document with AI",
   keywords: ["PRD", "VibePRD", "Product Requirements", "AI", "Development", "Software Engineering"],
   authors: [{ name: "Alex DC" }],
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  other: {
+    'msapplication-TileColor': '#ffffff',
+  }
 }
 
 export default function RootLayout({

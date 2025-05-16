@@ -451,8 +451,8 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
     <p className="mb-2">
       <strong>Un PRD (Product Requirements Document)</strong> es el documento fundamental que describe de manera clara y estructurada <strong>qué debe hacer tu producto</strong>, <strong>cómo debe funcionar</strong> y <strong>cuáles son sus objetivos</strong>. Es la base para que todo el equipo (diseño, desarrollo, negocio) trabaje alineado.
     </p>
-    <p className="mb-2">
-      <strong>Pero un PRD de VIBE PRD, diseñado para IAs, va un paso más allá:</strong>
+    <p className="mb-4 mt-6 text-center">
+      <span className="text-2xl mr-2">🔥</span><strong className="uppercase">Pero un PRD de VIBE PRD, diseñado para IAs, va un paso más allá:</strong>
     </p>
     <ul className="list-none space-y-2 mb-4 text-left">
       <li className="flex items-start gap-2">
@@ -473,7 +473,13 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
       </li>
     </ul>
     <p className="mb-2">
-      Para el <strong>Vibe Coding</strong> (programar con IA de forma ágil y efectiva), un PRD de VIBE PRD es tu mejor aliado. Asegura que la IA reciba <strong>instrucciones inequívocas</strong> para generar código de alta calidad, bien estructurado y perfectamente alineado con tu visión. <span className="font-bold">¡No le pidas a una IA que programe sin el PRD de VIBE PRD!</span>
+      Para el <strong>Vibe Coding</strong> (programar con IA de forma ágil y efectiva), un PRD de VIBE PRD es tu mejor aliado. Asegura que la IA reciba <strong>instrucciones inequívocas</strong> para generar código de alta calidad, bien estructurado y perfectamente alineado con tu visión.
+    </p>
+    
+    <p className="mt-6 text-center">
+      <span className="font-bold text-lg bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+        ¡NO LE PIDAS A UNA IA QUE PROGRAME SIN EL PRD DE VIBE PRD!
+      </span>
     </p>
   </div>
 

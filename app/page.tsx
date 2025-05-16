@@ -440,27 +440,27 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
         </div>
 
         {/* Sección: ¿Qué es un PRD y por qué es importante? */}
-        <section className="max-w-3xl mx-auto mb-12 bg-white/5 rounded-xl p-8 shadow-lg border border-white/10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-white">{t("prdTitle")}</h2>
-          <p className="text-white/90 text-lg mb-4 text-center">
-            {t("prdDescription")}
-          </p>
-          <ul className="text-white/80 space-y-2 mb-4">
-            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature1")}</li>
-            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature2")}</li>
-            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature3")}</li>
-            <li className="flex items-start gap-2"><span className="text-green-400 mt-1">✓</span> {t("prdFeature4")}</li>
-          </ul>
-          <p className="text-white/80 text-md text-center">
-            {t("prdVibeCoding")}
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center mt-6">
-            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
-            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>
-            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag3")}</div>
-            <div className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag4")}</div>
-          </div>
-        </section>
+        <section className="max-w-3xl mx-auto mb-12 bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-white/10">
+  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">{t("prdTitle")}</h2>
+  <p className="text-slate-700 dark:text-white/90 text-lg mb-4 text-center">
+    {t("prdDescription")}
+  </p>
+  <ul className="text-slate-600 dark:text-white/80 space-y-2 mb-4">
+    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature1")}</li>
+    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature2")}</li>
+    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature3")}</li>
+    <li className="flex items-start gap-2"><span className="text-green-500 dark:text-green-400 mt-1">✓</span> {t("prdFeature4")}</li>
+  </ul>
+  <p className="text-slate-600 dark:text-white/80 text-md text-center">
+    {t("prdVibeCoding")}
+  </p>
+  <div className="flex flex-wrap gap-3 justify-center mt-6">
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag1")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag2")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag3")}</div>
+    <div className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">{t("prdTag4")}</div>
+  </div>
+</section>
       </div>
 
       <DownloadBanner show={showDownloadBanner} onClose={() => setShowDownloadBanner(false)} />

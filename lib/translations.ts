@@ -250,7 +250,7 @@ export const translations = {
     downloadSuccess: "¡PRD descargado con éxito!",
     visitNewsletter: "Visita La Mafia IA Newsletter",
     creatorInfo: "Creado por Alex DC",
-    howItWorks: "🧠\nCómo Funciona VIBE PRD",
+    howItWorks: "\nCómo Funciona VIBE PRD 🧠",
     step1Title: "Describe Tu Visión",
     step1Description: "Comparte tu idea de producto en lenguaje natural, ¡nosotros nos encargamos del resto!",
     step2Title: "Análisis Inteligente",

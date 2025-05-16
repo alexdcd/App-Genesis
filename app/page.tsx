@@ -246,7 +246,7 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
               </ul>
               <div className="flex justify-center">
                 <a href="https://aimafia.substack.com/" target="_blank" rel="noopener noreferrer" className="bg-white/5 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-white/10 transition-colors flex items-center gap-2 mt-2">
-                  <span>Creado por La Mafia IA</span>
+                  <span>{t("createdBy")}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 opacity-70">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -310,9 +310,9 @@ Prioridad: El stack tecnológico recomendado por el usuario debe ser priorizado 
                     </Button>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    {platform === "generic" && "El PRD generado será un documento estándar que podrás usar como referencia para cualquier herramienta o plataforma."}
-                    {platform === "cursor" && "El PRD se optimizará para Cursor, incluyendo comandos específicos y estructura de archivos recomendada para el editor."}
-                    {platform === "windsurf" && "El PRD se adaptará a Windsurf, con consideraciones especiales para desarrollo colaborativo y características específicas de la plataforma."}
+                    {platform === "generic" && t("platformGenericDesc")}
+                    {platform === "cursor" && t("platformCursorDesc")}
+                    {platform === "windsurf" && t("platformWindsurfDesc")}
                   </p>
                 </div>
 

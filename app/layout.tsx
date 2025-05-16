@@ -18,6 +18,25 @@ export const metadata: Metadata = {
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    images: [
+      {
+        url: '/vibe_PRD.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Vibe PRD Preview',
+      },
+    ],
+    type: 'website',
+    title: '🧠 VibePRD - AI-Powered Product Requirements Document Generator',
+    description: 'Transform your app idea into a comprehensive product requirements document with AI',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '🧠 VibePRD - AI-Powered Product Requirements Document Generator',
+    description: 'Transform your app idea into a comprehensive product requirements document with AI',
+    images: ['/vibe_PRD.jpg'],
+  },
   other: {
     'msapplication-TileColor': '#ffffff',
   }

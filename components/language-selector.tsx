@@ -15,7 +15,6 @@ export default function LanguageSelector() {
 
   return (
     <div className="flex items-center">
-      <span className="mr-2 text-sm text-slate-900 dark:text-slate-100">{t("languageSelector")}:</span>
       <Select value={language} onValueChange={(value) => setLanguage(value as any)}>
         <SelectTrigger className="w-[120px] bg-white border-slate-300 text-slate-900 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100">
           <SelectValue placeholder="Language" />

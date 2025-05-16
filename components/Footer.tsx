@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 rounded-xl shadow p-4 w-full max-w-2xl">
         <div className="w-10 h-10 rounded-full border-2 border-yellow-300 bg-yellow-200 overflow-hidden flex items-center justify-center">
   <Image
-    src="/alexdc.jpg"
+    src="/alex_dc_avatar.jpg"
     alt="Alex DC"
     width={40}
     height={40}

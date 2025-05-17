@@ -259,7 +259,7 @@ export const translations = {
     prdIntroMiddle: "es el documento fundamental que describe de manera clara y estructurada",
     prdIntroStrong: "qué debe hacer tu producto, cómo debe funcionar y cuáles son sus objetivos.",
     prdIntroEnd: "Es la base para que todo el equipo (diseño, desarrollo, negocio) trabaje alineado.",
-    prdSubtitle: "Pero un PRD de VIBE PRD, diseñado para IAs, va un paso más allá:",
+    prdSubtitle: "Pero nuestro PRD, diseñado para IAs, va un paso más allá:",
     prdBullet1Strong: "Define con precisión quirúrgica",
     prdBullet1Rest: "el alcance, objetivos y funcionalidades que la IA debe implementar.",
     prdBullet2Strong: "Evita ambigüedades",

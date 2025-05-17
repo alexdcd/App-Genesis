@@ -1,8 +1,21 @@
 import { NextResponse } from "next/server"
+import { sanitizePrompt, validateSanitizedPrompt } from "@/lib/prompt-sanitizer"
 
 export async function POST(request: Request) {
   try {
     const { prompt, platform, productType } = await request.json()
+    
+    // Sanitizar el prompt para prevenir inyecciones
+    const sanitizedPrompt = sanitizePrompt(prompt, { 
+      level: 'markdown-safe', 
+      maxLength: 4000 // Limitar tamaño para prevenir DoS
+    })
+    
+    // Validar que el prompt sanitizado sea seguro
+    const validationResult = validateSanitizedPrompt(sanitizedPrompt)
+    if (!validationResult.valid) {
+      return NextResponse.json({ error: `Prompt inválido: ${validationResult.message}` }, { status: 400 })
+    }
 
     const GROQ_API_KEY = process.env.GROQ_API_KEY
 
@@ -20,7 +33,7 @@ Actúa como un ingeniero de software senior y arquitecto de sistemas experto en 
 Genera un PRD detallado basado en las siguientes instrucciones del usuario:
 
 \`\`\`
-${prompt}
+${sanitizedPrompt}
 \`\`\`
 
 ## Estructura del PRD

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { sanitizePrompt, validateSanitizedPrompt } from "@/lib/prompt-sanitizer"
+import { callGroqApi } from "@/lib/api-security"
 
 export async function POST(request: Request) {
   try {
@@ -17,12 +18,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: `Prompt inválido: ${validationResult.message}` }, { status: 400 })
     }
 
-    const GROQ_API_KEY = process.env.GROQ_API_KEY
-
-    if (!GROQ_API_KEY) {
-      return NextResponse.json({ error: "GROQ_API_KEY is not defined" }, { status: 500 })
-    }
-
+    // Construir el prompt del sistema
     const systemPrompt = `# Prompt: Generador de PRD Optimizado para Desarrollo con IA
 
 ## Contexto y Rol
@@ -149,10 +145,11 @@ Enfócate en proporcionar especificaciones claras, directas y accionables que mi
 - Elimina cualquier información que no sea estrictamente necesaria para la IA desarrolladora.`
 
     // For testing purposes, return a mock response if we're in development mode
-    if (process.env.NODE_ENV === "development" && !GROQ_API_KEY.startsWith("gsk_")) {
+    // Usar respuesta mock en desarrollo si no hay API key válida
+    if (process.env.NODE_ENV === "development" && (!process.env.GROQ_API_KEY || !process.env.GROQ_API_KEY.startsWith("gsk_"))) {
       console.log("Using mock response for development")
       return NextResponse.json({
-        blueprint: `# PRD: ${prompt}
+        blueprint: `# PRD: ${sanitizedPrompt}
 
 ## 1. Problema y Contexto
 - **Cliente**: Desarrolladores y equipos de producto que necesitan documentación técnica estructurada
@@ -218,13 +215,9 @@ Enfócate en proporcionar especificaciones claras, directas y accionables que mi
       })
     }
 
-    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${GROQ_API_KEY}`,
-      },
-      body: JSON.stringify({
+    try {
+      // Usar el módulo de seguridad para llamar a la API de GROQ
+      const data = await callGroqApi<any>({
         model: "llama3-70b-8192",
         messages: [
           {
@@ -233,24 +226,38 @@ Enfócate en proporcionar especificaciones claras, directas y accionables que mi
           },
           {
             role: "user",
-            content: prompt,
+            content: sanitizedPrompt, // Usar el prompt sanitizado
           },
         ],
         temperature: 0.7,
         max_tokens: 4000,
-      }),
-    })
-
-    if (!response.ok) {
-      const errorData = await response.text()
-      console.error(`Groq API error: ${response.status} ${errorData}`)
-      return NextResponse.json({ error: `Groq API error: ${response.status}` }, { status: response.status })
-    }
-
-    const data = await response.json()
-    return NextResponse.json({ blueprint: data.choices[0].message.content })
+      });
+      // Validar que la respuesta tiene el formato esperado
+      if (!data || !data.choices || !data.choices[0]?.message?.content) {
+        return NextResponse.json({ error: "Respuesta inesperada de la API de GROQ" }, { status: 502 });
+      }
+      return NextResponse.json({ blueprint: data.choices[0].message.content });
   } catch (error) {
-    console.error("Error generating PRD:", error)
-    return NextResponse.json({ error: "Failed to generate PRD" }, { status: 500 })
+    // Manejo de errores mejorado con información específica pero segura
+    console.error("Error generating PRD:", error instanceof Error ? error.message : "Unknown error")
+    
+    // Determinar el tipo de error para devolver un código de estado apropiado
+    let statusCode = 500;
+    let errorMessage = "Failed to generate PRD";
+    
+    if (error instanceof Error) {
+      if (error.message.includes("API key")) {
+        statusCode = 401; // Unauthorized
+        errorMessage = "API authentication error";
+      } else if (error.message.includes("timeout") || error.name === "AbortError") {
+        statusCode = 504; // Gateway Timeout
+        errorMessage = "Request timed out";
+      } else if (error.message.includes("inválido")) {
+        statusCode = 400; // Bad Request
+        errorMessage = error.message;
+      }
+    }
+    
+    return NextResponse.json({ error: errorMessage }, { status: statusCode })
   }
 }
